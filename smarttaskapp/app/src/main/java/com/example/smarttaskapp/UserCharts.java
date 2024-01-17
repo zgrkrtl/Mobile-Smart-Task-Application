@@ -28,7 +28,7 @@ public class UserCharts extends AppCompatActivity {
     private ImageView displayAvatar;
 
     List<Task> taskList = TaskInitializer.initializeTasks();
-
+    private ChartView chartView;
     private Map<String, Integer> avatarResourceMap;
 
 
@@ -62,7 +62,6 @@ public class UserCharts extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
                     User user = dataSnapshot.getValue(User.class);
-
                     displayUserName.setText("User Name: " + user.getUserName());
                     displayUserBirthDate.setText("Birth Date: " + user.getUserBirthDate());
                     // Update UI with user information
@@ -98,6 +97,32 @@ public class UserCharts extends AppCompatActivity {
             }
         });
 
+        chartView = findViewById(R.id.chartView);
+
+        // Assuming you have a taskList with Task objects
+
+        // Count the labels
+        Map<String, Integer> labelCountMap = countLabels(taskList);
+
+        // Set up the chart based on the label counts
+        chartView.setData(labelCountMap);
+    }
+
+    private Map<String, Integer> countLabels(List<Task> taskList) {
+        Map<String, Integer> labelCountMap = new HashMap<>();
+
+        for (Task task : taskList) {
+            String label = task.getLabel();
+
+            if (labelCountMap.containsKey(label)) {
+                int count = labelCountMap.get(label);
+                labelCountMap.put(label, count + 1);
+            } else {
+                labelCountMap.put(label, 1);
+            }
+        }
+
+        return labelCountMap;
     }
 
     private void saveTaskList() {

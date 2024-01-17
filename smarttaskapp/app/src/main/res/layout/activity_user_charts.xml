@@ -32,4 +32,27 @@
         android:src="@drawable/ic_launcher_foreground"
         android:tag="avatar" />
 
+    <!-- ChartView added below existing items -->
+    <com.example.smarttaskapp.ChartView
+        android:id="@+id/chartView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/displayAvatar"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:id="@+id/labelsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chartView"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meeting"/>
+
+    </LinearLayout>
+
 </RelativeLayout>

@@ -33,7 +33,7 @@ android {
 }
 
 dependencies {
-    implementation ("com.google.firebase:firebase-database:20.3.0")
+    implementation("com.google.firebase:firebase-database:20.3.0")
     implementation("com.google.firebase:firebase-analytics")
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -51,10 +51,9 @@ dependencies {
     implementation("com.google.firebase:firebase-auth")
     // Add the dependency for the Realtime Database library
     // When using the BoM, you don't specify versions in Firebase library dependencies
-
-
+    // other dependencies
+}
 
     // Add the dependency for the Cloud Storage library
     // When using the BoM, you don't specify versions in Firebase library dependencies
 
-}

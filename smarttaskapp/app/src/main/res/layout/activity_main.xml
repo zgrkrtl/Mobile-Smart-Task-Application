@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,98 +13,98 @@
         android:id="@+id/editTextText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="@string/write_something_to_search"
         android:inputType="text"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/taskRycyclerView"/>
 
-    <ListView
-        android:id="@+id/taskListView"
+    <FrameLayout
+        android:id="@+id/taskRycyclerView"
         android:layout_width="match_parent"
-        android:layout_height="00dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:padding="5dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintTop_toBottomOf="@id/editTextText"
-        app:layout_constraintBottom_toTopOf="@id/trilogybtn"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/trilogybtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
     <LinearLayout
+        android:id="@+id/trilogybtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:orientation="horizontal"
-        android:id="@+id/trilogybtn"
-        app:layout_constraintBottom_toTopOf="@id/iconbtns"
         android:gravity="center_horizontal"
-        android:layout_marginBottom="15dp">
+        app:layout_constraintTop_toBottomOf="@+id/taskRycyclerView"
+        app:layout_constraintBottom_toTopOf="@+id/iconbtns">
+
         <TextView
             android:id="@+id/allbtn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
+            android:layout_weight="1"
+            android:textSize="18sp"
             android:text="All"
-            android:padding="5dp"
-            />
+            android:padding="8dp"
+            android:gravity="center"
+            android:background="#ECECEC"/>
 
         <TextView
             android:id="@+id/todaybtn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:background="#727DDFEC"
+            android:layout_weight="1"
+            android:textSize="18sp"
             android:text="Today"
-            android:padding="5dp"
-            android:shadowColor="#CBB5AFAF"
-
-           />
+            android:padding="8dp"
+            android:gravity="center"
+            android:background="#727DDFEC"
+            android:textColor="#ffffff"/>
 
         <TextView
             android:id="@+id/laterbtn"
-            android:textSize="30sp"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
             android:text="Later"
-            android:padding="5dp"
-            />
+            android:padding="8dp"
+            android:gravity="center"
+            android:background="#ECECEC"/>
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/iconbtns"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:id="@+id/iconbtns"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        >
+        app:layout_constraintTop_toBottomOf="@id/trilogybtn"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageView
             android:id="@+id/userChart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/setting_button"
-
-            />
+            android:layout_margin="8dp"/>
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/addTaskBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/add_button" />
+            app:srcCompat="@drawable/add_button"
+            android:layout_margin="8dp"/>
 
         <ImageView
             android:id="@+id/userProfileBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/profile_button"
-            />
+            android:layout_margin="8dp"/>
     </LinearLayout>
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
