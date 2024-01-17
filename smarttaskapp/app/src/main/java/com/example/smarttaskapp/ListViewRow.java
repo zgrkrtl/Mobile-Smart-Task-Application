@@ -17,6 +17,7 @@ public class ListViewRow extends AppCompatActivity {
     TextView taskHeader;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tasklistview_row);
 

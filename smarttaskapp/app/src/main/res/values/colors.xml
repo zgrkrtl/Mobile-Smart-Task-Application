@@ -5,4 +5,7 @@
     <color name="colorRed">#f21202</color>
     <color name="colorYellow">#e6f202</color>
     <color name="colorGreen">#02f202</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+
 </resources>

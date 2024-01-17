@@ -1,8 +1,5 @@
 package com.example.smarttaskapp;
 
-import java.util.ArrayList;
-import java.util.List;
-
 //Eness El BEKAY ,Ö.Özgür KARTAL
 public class Task {
 
@@ -12,8 +9,9 @@ public class Task {
     //Label added
     private String label;
 
-
-
+    public Task() {
+        // Empty constructor needed for Firebase
+    }
 
     public Task(String type, int picId, String label) {
 

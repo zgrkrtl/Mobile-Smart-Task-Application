@@ -13,6 +13,12 @@
         android:theme="@style/Theme.SmartTaskApp"
         tools:targetApi="31">
         <activity
+            android:name=".UserCharts"
+            android:exported="false" />
+        <activity
+            android:name=".UserProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".ViewTaskActivity"
             android:exported="false" />
         <activity

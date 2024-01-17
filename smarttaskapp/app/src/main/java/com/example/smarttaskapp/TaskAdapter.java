@@ -16,7 +16,7 @@ import androidx.cardview.widget.CardView;
 import java.util.ArrayList;
 import java.util.List;
 //Eness El BEKAY
-public class TaskAdapter extends BaseAdapter {
+public class TaskAdapter   extends BaseAdapter {
     private List<Task> taskList;
     private LayoutInflater layoutInflater;
 

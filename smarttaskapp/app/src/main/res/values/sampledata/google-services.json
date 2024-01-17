@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1076314519237",
+    "project_id": "smarttaskapp-5e2c8",
+    "storage_bucket": "smarttaskapp-5e2c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076314519237:android:165a117dde0dfde977a2ac",
+        "android_client_info": {
+          "package_name": "com.example.smarttaskapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmVdkrhSGRKk8D7_1_rHAXR_JrM7FUUG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
