@@ -19,7 +19,6 @@ public class Task implements Serializable, Parcelable {
 
 
     private String type;
-    private int picId;
     //Label added
     private String label;
     private boolean isChecked = false;
@@ -41,7 +40,9 @@ public class Task implements Serializable, Parcelable {
         isChecked = checked;
     }
 
-
+    public Task() {
+        //database
+    }
 
     public Task(String type) {
 
@@ -57,13 +58,6 @@ public class Task implements Serializable, Parcelable {
         this.type = type;
     }
 
-    public int getPicId() {
-        return picId;
-    }
-
-    public void setPicId(int picId) {
-        this.picId = picId;
-    }
 
     public String getLabel() {
         return label;
@@ -81,21 +75,18 @@ public class Task implements Serializable, Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.type);
-        dest.writeInt(this.picId);
         dest.writeString(this.label);
         dest.writeString(this.dueTo);
     }
 
     public void readFromParcel(Parcel source) {
         this.type = source.readString();
-        this.picId = source.readInt();
         this.label = source.readString();
         this.dueTo = source.readString();
     }
 
     protected Task(Parcel in) {
         this.type = in.readString();
-        this.picId = in.readInt();
         this.label = in.readString();
         this.dueTo = in.readString();
     }

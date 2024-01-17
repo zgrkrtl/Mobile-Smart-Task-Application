@@ -85,8 +85,7 @@ public class UserCharts extends AppCompatActivity {
                 if (snapshot.exists()) {
                     GenericTypeIndicator<List<Task>> taskListType = new GenericTypeIndicator<List<Task>>() {
                     };
-                    List<Task> retrievedTaskList = snapshot.getValue(taskListType);
-
+                  taskList = snapshot.getValue(taskListType);
                     // You can now use retrievedTaskList as needed
                 }
             }

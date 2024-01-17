@@ -19,6 +19,24 @@ public class TaskInitializer {
         taskList.add(new Task("call your mom", R.drawable.uncheked_box, "Family"));*/
 
         // Add more tasks if needed
+        taskList.add(new Task("go to the grocery store"));
+        taskList.add(new Task("do your homework"));
+        taskList.add(new Task("dentist appointment"));
+        taskList.add(new Task("pick up ahmed"));
+        taskList.add(new Task("a coffee meeting"));
+        taskList.add(new Task("theater club meeting"));
+        taskList.add(new Task("do your laundry"));
+        taskList.add(new Task("meet with your freind"));
+        taskList.add(new Task("call your mom"));
+        taskList.add(new Task("go to the grocery store"));
+        taskList.add(new Task("do your homework"));
+        taskList.add(new Task("dentist appointment"));
+        taskList.add(new Task("pick up ahmed"));
+        taskList.add(new Task("a coffee meeting"));
+        taskList.add(new Task("theater club meeting"));
+        taskList.add(new Task("do your laundry"));
+        taskList.add(new Task("meet with your freind"));
+        taskList.add(new Task("call your mom"));
 
         return taskList;
     }

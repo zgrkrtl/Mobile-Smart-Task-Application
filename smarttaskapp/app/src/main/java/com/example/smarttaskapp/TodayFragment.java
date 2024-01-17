@@ -99,7 +99,7 @@ public class TodayFragment extends Fragment implements FragmentButtonsInterface{
         Log.i("todayfragment", "onviewcreate :  task size = " + taskList.size());
         copy =taskListCopy(taskList);
         initializeList(copy);
-        copy.add(new Task("HHHHDDDD"));
+
 
         RecyclerView recyclerView = view.findViewById(R.id.reyclerViewFragmentt);
         adapter = new TaskRecyclerViewAdapter(getContext(),copy,taskRecyclerViewInterface);

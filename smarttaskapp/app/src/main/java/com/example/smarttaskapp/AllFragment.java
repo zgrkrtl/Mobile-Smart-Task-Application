@@ -79,7 +79,7 @@ public class AllFragment extends Fragment implements FragmentButtonsInterface{
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Log.i("allfragment", "onviewcreate :  task size = " + taskList.size());
+        Log.i("allfragment", "onviewcreate :  task size = " );
 
         Log.i("allFragment", "onViewCreated");
 

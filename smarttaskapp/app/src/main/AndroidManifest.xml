@@ -16,6 +16,11 @@
             android:name=".UserCharts"
             android:exported="false" />
         <activity
+            android:name=".UpdateLabelActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
             android:name=".UserProfileActivity"
             android:exported="false" />
         <activity
