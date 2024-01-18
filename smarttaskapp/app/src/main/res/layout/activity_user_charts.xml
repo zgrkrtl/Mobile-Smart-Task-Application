@@ -33,13 +33,7 @@
         android:layout_marginTop="20dp"
         android:src="@drawable/ic_launcher_foreground"
         android:tag="avatar" />
-    <!--
-        <com.example.smarttaskapp.ChartView
-            android:id="@+id/chartView"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_below="@id/displayAvatar"
-            android:layout_marginTop="50dp" />-->
+
     <Button
         android:id="@+id/optionsBtn"
         android:layout_width="wrap_content"
@@ -54,12 +48,12 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_below="@+id/optionsBtn"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
         android:hint="developed by Eness El Bekay"
         android:text=""
-        android:layout_centerHorizontal="true"
-        android:textColor="#F48A8A"
-        android:textColorHint="#AF4D4D"
+        android:textColor="#0B1681"
+        android:textColorHint="#530755"
         android:textSize="20dp" />
 
     <LinearLayout
@@ -102,8 +96,7 @@
             android:text="Visit our website"
             android:textColor="#4CAF50"
             android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
     </LinearLayout>
 </RelativeLayout>

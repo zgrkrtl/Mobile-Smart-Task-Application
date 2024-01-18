@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UserCharts extends AppCompatActivity {
+public class UserProfileInformative extends AppCompatActivity {
     private TextView displayUserName;
     private TextView displayUserBirthDate;
     private ImageView displayAvatar;
@@ -45,7 +46,7 @@ public class UserCharts extends AppCompatActivity {
             }
         });
 
-
+//Avatar tags kept in a hashmap to acquire the right image avatarTag from firebasedatabase
         avatarResourceMap = new HashMap<>();
         avatarResourceMap.put("avatar6", R.mipmap.tea);
         avatarResourceMap.put("avatar2", R.mipmap.cat);
@@ -82,7 +83,7 @@ public class UserCharts extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                // Handle error
+                Toast.makeText(UserProfileInformative.this, "DATABASE ERROR", Toast.LENGTH_SHORT).show();
             }
         });
 

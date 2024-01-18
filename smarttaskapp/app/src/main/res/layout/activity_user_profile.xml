@@ -140,7 +140,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/saveUserInfoBtn"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
         android:hint="Save user information!"
         android:textColor="@color/black" />
+
 
 </RelativeLayout>

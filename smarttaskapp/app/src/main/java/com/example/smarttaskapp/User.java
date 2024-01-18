@@ -1,7 +1,7 @@
 package com.example.smarttaskapp;
 
-import java.util.List;
-
+//Ö. Özgür KARTAL
+//UserProfile handle
 public class User {
     private String userName;
     private String userBirthDate;

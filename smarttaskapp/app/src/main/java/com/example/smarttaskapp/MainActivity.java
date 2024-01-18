@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements TaskRecyclerViewI
         });
 
 
-        //Restart initialization
+        //Restart initialization if necessary !DO NOT DELETE
        /* if (taskList.isEmpty()) {
             taskList = TaskInitializer.initializeTasks();
             myRef.setValue(taskList); // Update tasks in the database
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements TaskRecyclerViewI
             @Override
             public void onClick(View v) {
                 // Create an Intent to start UserProfileActivity
-                Intent userProfileIntent = new Intent(MainActivity.this, UserCharts.class);
+                Intent userProfileIntent = new Intent(MainActivity.this, UserProfileInformative.class);
                 startActivity(userProfileIntent);
             }
         });
