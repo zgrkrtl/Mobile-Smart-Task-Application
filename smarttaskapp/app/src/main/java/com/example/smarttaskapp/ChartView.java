@@ -38,7 +38,6 @@ public class ChartView extends View {
         textPaint = new Paint();
 
         barColors = new ArrayList<>();
-        // Add different colors for each bar
         barColors.add(Color.BLUE);
         barColors.add(Color.RED);
         barColors.add(Color.GREEN);
@@ -74,11 +73,11 @@ public class ChartView extends View {
             int startY = canvasHeight - (int) (entry.getValue() * dataScale);
             int endY = canvasHeight;
 
-            // Set a different color for each bar
+
             barPaint.setColor(barColors.get(i % barColors.size()));
             canvas.drawRect(startX, startY, endX, endY, barPaint);
 
-            // Display data value above each bar
+
             textPaint.setColor(Color.BLACK);
             canvas.drawText(String.valueOf(entry.getValue()), startX + barWidth, startY - 10, textPaint);
 

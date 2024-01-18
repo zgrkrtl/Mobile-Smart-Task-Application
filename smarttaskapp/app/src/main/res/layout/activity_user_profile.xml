@@ -23,7 +23,7 @@
             android:layout_marginEnd="15dp"
             android:fontFamily="@font/quicksand"
             android:text="WHO ARE YOU ?"
-            android:textColor="#059505"
+            android:textColor="#5E0595"
             android:textSize="25dp"
             android:textStyle="bold" />
 
@@ -55,7 +55,7 @@
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/quicksand"
             android:text="BIRTHDATE"
-            android:textColor="#059505"
+            android:textColor="#5E0595"
             android:textSize="25dp"
             android:textStyle="bold" />
 
@@ -99,7 +99,7 @@
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/quicksand"
             android:text="YOUR AVATAR"
-            android:textColor="#059505"
+            android:textColor="#5E0595"
             android:textSize="25dp"
             android:textStyle="bold" />
 

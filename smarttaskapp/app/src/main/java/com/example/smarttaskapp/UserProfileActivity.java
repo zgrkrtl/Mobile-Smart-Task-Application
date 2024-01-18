@@ -24,7 +24,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Calendar;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class UserProfileActivity extends AppCompatActivity {
@@ -37,7 +36,6 @@ public class UserProfileActivity extends AppCompatActivity {
     private Button saveUserInfoButton;
     private TextView userSuccessText;
     private EditText userName;
-    List<Task> taskList = TaskInitializer.initializeTasks();
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("user");
@@ -46,6 +44,7 @@ public class UserProfileActivity extends AppCompatActivity {
         tvSelectedDate = findViewById(R.id.tvSelectedDate);
         ivSelectedAvatar = findViewById(R.id.avatarImg);
         userName = findViewById(R.id.userName);
+        userSuccessText = findViewById(R.id.userSuccessText);
 
 
         String userNameStr = userName.getText().toString();
@@ -67,6 +66,8 @@ public class UserProfileActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Log.d("Firebase", "User information saved successfully");
+                        userSuccessText.setText("Successfully Saved");
+                        userSuccessText.setTextColor(getResources().getColor(R.color.green));
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -76,6 +77,7 @@ public class UserProfileActivity extends AppCompatActivity {
                     }
                 });
     }
+
 
     @SuppressLint("MissingInflatedId")
     @Override

@@ -4,4 +4,5 @@
     <string name="later">later</string>
     <string name="today">today</string>
     <string name="write_something_to_search">write something to search</string>
+    <string name="error_invalid_name">INVALID NAME</string>
 </resources>

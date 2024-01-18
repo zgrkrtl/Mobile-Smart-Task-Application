@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements TaskRecyclerViewI
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        myRef.setValue(taskList);
+
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -53,7 +53,9 @@ public class MainActivity extends AppCompatActivity implements TaskRecyclerViewI
                     List<Task> updatedTaskList = snapshot.getValue(taskListType);
                     Log.i("databasetasklist", "onDataChange: size " + updatedTaskList.size());
                     if (updatedTaskList != null) {
-                        taskList = updatedTaskList;
+                        taskList.clear(); // Clear existing tasks
+                        taskList.addAll(updatedTaskList); // Add tasks from Firebase
+
                         // Update your UI or perform any other actions with the updated taskList
                     }
 
@@ -67,6 +69,12 @@ public class MainActivity extends AppCompatActivity implements TaskRecyclerViewI
             }
         });
 
+
+        //Restart initialization
+       /* if (taskList.isEmpty()) {
+            taskList = TaskInitializer.initializeTasks();
+            myRef.setValue(taskList); // Update tasks in the database
+        }*/
 
         allBtn = findViewById(R.id.allbtn);
         laterBtn = findViewById(R.id.laterbtn);
@@ -193,11 +201,13 @@ public class MainActivity extends AppCompatActivity implements TaskRecyclerViewI
             Task updatedTask = (Task) data.getSerializableExtra("updatedTask");
             taskList.add(0, updatedTask);
             allBtn.callOnClick();
-
+            myRef.setValue(taskList);
 
         } else {
             Log.e("onActivityResult", "Invalid requestCode or resultCode");
         }
-        myRef.setValue(taskList);
+
     }
+
+
 }

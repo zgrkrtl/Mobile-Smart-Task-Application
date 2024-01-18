@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E8E6D3"
+    android:padding="16dp"
     tools:context=".UserProfileActivity">
 
     <TextView
@@ -31,28 +33,77 @@
         android:layout_marginTop="20dp"
         android:src="@drawable/ic_launcher_foreground"
         android:tag="avatar" />
-
-    <!-- ChartView added below existing items -->
-    <com.example.smarttaskapp.ChartView
-        android:id="@+id/chartView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+    <!--
+        <com.example.smarttaskapp.ChartView
+            android:id="@+id/chartView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/displayAvatar"
+            android:layout_marginTop="50dp" />-->
+    <Button
+        android:id="@+id/optionsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/displayAvatar"
-        android:layout_marginTop="20dp" />
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:text="OPTIONS" />
+
+    <TextView
+        android:id="@+id/flexibleText"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/optionsBtn"
+        android:layout_marginTop="200dp"
+        android:hint="developed by Eness El Bekay"
+        android:text=""
+        android:layout_centerHorizontal="true"
+        android:textColor="#F48A8A"
+        android:textColorHint="#AF4D4D"
+        android:textSize="20dp" />
 
     <LinearLayout
-        android:id="@+id/labelsLayout"
+        android:id="@+id/footerLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/chartView"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical" >
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
 
+        android:textAlignment="center">
+
+        <!-- Date TextView -->
         <TextView
+            android:id="@+id/dateTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Meeting"/>
+            android:text="2024 "
+            android:textColor="#4CAF50"
+            android:textSize="14sp" />
+
+        <!-- Additional Information TextView -->
+        <TextView
+            android:id="@+id/additionalInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="All rights reserved"
+            android:textColor="#4CAF50"
+            android:textSize="14sp" />
+
+        <!-- Link TextView -->
+        <TextView
+            android:id="@+id/linkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:onClick="onVisitWebsiteClick"
+            android:text="Visit our website"
+            android:textColor="#4CAF50"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
 
     </LinearLayout>
-
 </RelativeLayout>
