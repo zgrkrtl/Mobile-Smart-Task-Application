@@ -49,6 +49,9 @@ public class TagAdapter extends BaseAdapter {
         // Set the data for the item
         TextView tagNameTextView = view.findViewById(R.id.tagNameTextView);
         tagNameTextView.setText(currentTag.getLabel());
+        tagNameTextView.setBackgroundColor(currentTag.getColor());
+
+
 
         // You can add more views and set their data here
 

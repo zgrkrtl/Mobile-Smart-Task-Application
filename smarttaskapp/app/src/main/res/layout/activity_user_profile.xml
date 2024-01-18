@@ -134,6 +134,8 @@
 
         />
 
+
+
     <TextView
         android:id="@+id/userSuccessText"
         android:layout_width="wrap_content"
@@ -143,6 +145,14 @@
         android:layout_marginTop="40dp"
         android:hint="Save user information!"
         android:textColor="@color/black" />
+    <Button
+        android:id="@+id/goBackUserBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userSuccessText"
+        android:layout_marginTop="50dp"
+        android:text="go back"
 
+        />
 
 </RelativeLayout>

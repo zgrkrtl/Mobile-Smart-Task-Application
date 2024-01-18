@@ -20,11 +20,11 @@ public class UpdateLabelActivity extends AppCompatActivity {
         ArrayList<TaskTag> tagList = new ArrayList<>();
 
         // Create and populate the list of TaskTags
-        tagList.add(new TaskTag("Shopping", 0xFFF21202));
+        tagList.add(new TaskTag("Shopping", 0x88F21202));
         tagList.add(new TaskTag("Homework", 0xFFE6F202));
         tagList.add(new TaskTag("Chores")); // Assuming you have a default color for this case
-        tagList.add(new TaskTag("Family", 0xFF1202F2));
-        tagList.add(new TaskTag("Meeting", 0xFF9C27B0));
+        tagList.add(new TaskTag("Family", 0x881202F2));
+        tagList.add(new TaskTag("Meeting", 0x889C27B0));
 
         /*// Create an ArrayAdapter to display the tags in a ListView
         ArrayAdapter<TaskTag> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, tagList);

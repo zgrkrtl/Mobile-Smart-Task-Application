@@ -53,8 +53,11 @@ public class MainActivity extends AppCompatActivity implements TaskRecyclerViewI
                     List<Task> updatedTaskList = snapshot.getValue(taskListType);
                     Log.i("databasetasklist", "onDataChange: size " + updatedTaskList.size());
                     if (updatedTaskList != null) {
+                        Log.i("databasetasklist", "task list before geted clear size " + taskList.size());
                         taskList.clear(); // Clear existing tasks
                         taskList.addAll(updatedTaskList); // Add tasks from Firebase
+                        Log.i("databasetasklist", "after clearing tasklist size" + taskList.size());
+                        todayBtn.callOnClick();
 
                         // Update your UI or perform any other actions with the updated taskList
                     }
@@ -79,8 +82,10 @@ public class MainActivity extends AppCompatActivity implements TaskRecyclerViewI
         allBtn = findViewById(R.id.allbtn);
         laterBtn = findViewById(R.id.laterbtn);
         todayBtn = findViewById(R.id.todaybtn);
-        fragment = new TodayFragment(taskList, this, adapter);
-        replaceFragment(fragment);
+        Log.i("onCreateMain", "befor today fragment geting called tasklist size" + taskList.size());
+
+
+
 
         allBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements TaskRecyclerViewI
                 replaceFragment(new AllFragment(taskList, MainActivity.this));
             }
         });
+
 
         todayBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -173,6 +179,18 @@ public class MainActivity extends AppCompatActivity implements TaskRecyclerViewI
         intent.putExtra("task", (Serializable) fragmentInterface.getList().get(position));
         intent.putExtra("taskPosition", position);
         startActivityForResult(intent, YOUR_REQUEST_CODE);
+    }
+
+    @Override
+    public void onTaskLongClick(int position) {
+        Log.i("ontaskLongClick", "onTaskLongClick: in the main clicked");
+        FragmentButtonsInterface fragmentInterface = (FragmentButtonsInterface) getSupportFragmentManager().findFragmentById(R.id.taskRycyclerView);
+        Log.i("ontaskLongClick", "onTaskLongClick: in the main list size = " + fragmentInterface.getList().size());
+        fragmentInterface.removeTask(position);
+        fragmentInterface.getAdapter().notifyDataSetChanged();
+        myRef.setValue(taskList);
+
+
     }
 
     @SuppressLint("MissingSuperCall")

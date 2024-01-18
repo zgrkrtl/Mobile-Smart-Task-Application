@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -35,6 +36,7 @@ public class ViewTaskActivity extends AppCompatActivity {
     private boolean taskChangedStatus = false;
     TextInputEditText taskTitle;
     TextView save;
+    ImageView goBack;
     Button labelbtn;
     private Button dateButton;
     private Calendar selectedDate;
@@ -116,6 +118,13 @@ public class ViewTaskActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDatePickerDialog();
+            }
+        });
+        goBack = findViewById(R.id.gobackbtn);
+        goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

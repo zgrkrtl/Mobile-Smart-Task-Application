@@ -33,7 +33,7 @@ public class UserProfileActivity extends AppCompatActivity {
     private AlertDialog avatarDialog;
     private ImageView ivSelectedAvatar;
     private Map<String, Integer> avatarResourceMap;
-    private Button saveUserInfoButton;
+    private Button saveUserInfoButton,goBackBtn;
     private TextView userSuccessText;
     private EditText userName;
 
@@ -102,6 +102,13 @@ public class UserProfileActivity extends AppCompatActivity {
         avatarResourceMap.put("avatar4", R.mipmap.wizz);
         avatarResourceMap.put("avatar3", R.mipmap.dog);
         avatarResourceMap.put("avatar", R.mipmap.dog);
+        goBackBtn = findViewById(R.id.goBackUserBtn);
+        goBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         saveUserInfoButton.setOnClickListener(new View.OnClickListener() {
             @Override

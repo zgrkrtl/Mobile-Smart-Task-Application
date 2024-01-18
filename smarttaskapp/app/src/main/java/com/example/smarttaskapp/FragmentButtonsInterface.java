@@ -5,4 +5,5 @@ import java.util.List;
 public interface FragmentButtonsInterface {
     TaskRecyclerViewAdapter getAdapter();
     List<Task> getList();
+    void removeTask(int position);
 }

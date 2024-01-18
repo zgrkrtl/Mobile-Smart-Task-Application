@@ -171,4 +171,10 @@ public class LaterFragment extends Fragment implements FragmentButtonsInterface{
     public List<Task> getList() {
         return copy;
     }
+
+    @Override
+    public void removeTask(int position) {
+        Log.i("removeTaskLaterF", "removeTask: copy size = " + copy.size() + "task " + copy.get(position).getType());
+        taskList.remove(copy.get(position));copy.remove(position);
+    }
 }

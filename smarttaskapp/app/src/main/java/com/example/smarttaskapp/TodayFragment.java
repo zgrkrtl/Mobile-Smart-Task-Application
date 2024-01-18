@@ -47,6 +47,12 @@ public class TodayFragment extends Fragment implements FragmentButtonsInterface{
         return copy;
     }
 
+    @Override
+    public void removeTask(int position) {
+        Log.i("removeTaskTodayF", "removeTask: copy size = " + copy.size() + "task removed :" + copy.get(position).getType());
+        taskList.remove(copy.get(position));copy.remove(position);
+    }
+
     private TaskRecyclerViewAdapter adapter;
 
     public TodayFragment(List<Task> taskList,TaskRecyclerViewInterface taskRecyclerViewInterface,TaskRecyclerViewAdapter adaptert) {
@@ -99,6 +105,7 @@ public class TodayFragment extends Fragment implements FragmentButtonsInterface{
         Log.i("todayfragment", "onviewcreate :  task size = " + taskList.size());
         copy =taskListCopy(taskList);
         initializeList(copy);
+        Log.i("todayfragment", "onviewcreate :  task copy size = " + copy.size());
 
 
         RecyclerView recyclerView = view.findViewById(R.id.reyclerViewFragmentt);
